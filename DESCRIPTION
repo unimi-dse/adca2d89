@@ -1,0 +1,13 @@
+Package: sentimeter
+Type: Package
+Title: A Toolkit for Analyzing Sentiment of Italian Amazon Reviews
+Version: 0.1.0
+Author: Mehdi Abbassi
+Maintainer: Mehdi Abbassi <mehdi.abbassi@studenti.unimi.it>
+Description: This packages receives the like of the product on amazon.it (not other countries!)
+    and analyze the reviews using the exclusive Italian Sentiment Lexicon and will show the results.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Depends: R (>= 3.1.0)
+Imports: rvest, xml2, stringr, magrittr
