@@ -1,6 +1,26 @@
-# This functions will scrape the review page of a given product
-# and will put the review title, text and given stars in a tibble
-scrape_reviews <- function(asin, page_number){
+#' Scrape Reviews
+#'
+#' Gives the title, content and given star of any product on amazon.it 
+#'
+#' @param asin character. ASIN of the product.
+#' @param page_number numeric. The page that user want to scrape reviews.
+#'
+#' @return data.frame
+#' \describe{
+#'   \item{title}{Title of the review}
+#'   \item{text}{Content of the review}
+#'   \item{star}{Number of stars}
+#' }
+#'
+#' @examples
+#' \dontrun{
+#'  scrape_reviews("8845290034", 1)
+#' }
+#'
+#' @export
+#'
+scrape_reviews <- function(asin, page_number) {
+
   paste0("https://www.amazon.it/product-reviews/",asin,"/?pageNumber=",page_number) %>% xml2::read_html() -> doc
 
   doc %>% # Review Title
@@ -18,4 +38,5 @@ scrape_reviews <- function(asin, page_number){
   data.frame(title = (review_title %>% substring(19,nchar(review_title)-4)),
              text = (review_text %>% substring(19,nchar(review_text)-4)),
              star = (review_star %>% substring(1, 1))) %>% return()
+
 }

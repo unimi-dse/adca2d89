@@ -11,3 +11,4 @@ Encoding: UTF-8
 LazyData: true
 Depends: R (>= 3.1.0)
 Imports: rvest, xml2, stringr, magrittr
+RoxygenNote: 7.0.2
