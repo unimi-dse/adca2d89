@@ -13,6 +13,8 @@
 #'
 #' @export
 #'
+#'@importFrom magrittr '%>%'
+#'
 get_asin <- function(url) {
 
   xml2::read_html(url) %>% rvest::html_node("[id='ASIN']") %>% rvest::html_attr("value") %>% return()

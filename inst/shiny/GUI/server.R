@@ -1,14 +1,5 @@
 # Define server logic to summarize and view selected dataset ----
 server <- function(input, output) {
-
-  # Return the requested dataset ----
-  #datasetInput <- reactive({
-  #  switch(input$dataset,
-  #         "avvali" = cars,
-  #         "pressure" = dovvomi,
-  #         "cars" = sevvomi)
-  #})
-
   # Generate a summary of the dataset ----
   output$summary <- renderPrint({
     #dataset <- datasetInput()
@@ -19,12 +10,7 @@ server <- function(input, output) {
       cat(paste("ASIN:", asin))
       cat('\n')
       cat(paste("Number of reviews:", number_of_reviews(asin)))
+      sentiment_analysis(scrape_reviews(asin, 1))
     }
   })
-
-  # Show the first "n" observations ----
-  #output$view <- renderTable({
-  #  datasetInput()$input$obs
-  #})
-
 }

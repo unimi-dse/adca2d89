@@ -11,6 +11,8 @@
 #'  number_of_review_pages(6329)
 #' }
 #'
+#' @importFrom magrittr '%>%'
+#'
 number_of_review_pages <- function(number_of_reviews) {
 
   number_of_reviews %>% `/`(10) %>% ceiling() %>% return()

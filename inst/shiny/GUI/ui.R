@@ -10,12 +10,7 @@ ui <- fluidPage(
     # Sidebar panel for inputs ----
     sidebarPanel(
 
-      # Input: Selector for choosing dataset ----
-      #selectInput(inputId = "dataset",
-      #            label = "Choose a dataset:",
-      #            choices = c("avvali", "pressure", "cars")),
-
-      # Input: Numeric entry for number of obs to view ----
+      # Input: Text entry for URL of the product to view ----
       textInput(inputId = "amazon_url",
                 label = "Enter the address on amazon.it",
                 value = "",
@@ -29,9 +24,6 @@ ui <- fluidPage(
 
       # Output: Verbatim text for data summary ----
       verbatimTextOutput("summary"),
-
-      # Output: HTML table with requested number of observations ----
-      #tableOutput("view")
 
     )
   )

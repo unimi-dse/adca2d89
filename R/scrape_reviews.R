@@ -1,6 +1,6 @@
 #' Scrape Reviews
 #'
-#' Gives the title, content and given star of any product on amazon.it 
+#' Gives the title, content and given star of any product on amazon.it
 #'
 #' @param asin character. ASIN of the product.
 #' @param page_number numeric. The page that user want to scrape reviews.
@@ -18,6 +18,8 @@
 #' }
 #'
 #' @export
+#'
+#'@importFrom magrittr '%>%'
 #'
 scrape_reviews <- function(asin, page_number) {
 

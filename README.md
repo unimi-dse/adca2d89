@@ -11,7 +11,7 @@ devtools::install_github('unimi-dse/adca2d89')
 
 ## Dataset
 
-The package provides a dataset containing the lexicon for sentiment of Italian words, containing some thousand, always improving. The lexicon made exclusively for this package.
+The package provides a dataset containing the lexicon for sentiment of Italian words, containing some thousands. The lexicon made exclusively for this package.
 
 ```R
 # dataset documentation

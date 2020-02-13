@@ -13,6 +13,8 @@
 #'
 #' @export
 #'
+#'@importFrom magrittr '%>%'
+#'
 number_of_reviews <- function(asin) {
 
   paste0("https://www.amazon.it/product-reviews/", asin) %>% xml2::read_html() %>%
