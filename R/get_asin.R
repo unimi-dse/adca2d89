@@ -17,6 +17,12 @@
 #'
 get_asin <- function(url) {
 
-  xml2::read_html(url) %>% rvest::html_node("[id='ASIN']") %>% rvest::html_attr("value") %>% return()
+  first_attempt <- xml2::read_html(url) %>% rvest::html_node("[id='ASIN']") %>% rvest::html_attr("value")
+  if (is.na(first_attempt)) {
+    xml2::read_html(url) %>% rvest::html_node("[name='ASIN']") %>% rvest::html_attr("value") %>% return()
+  }
+  else {
+    return(first_attempt)
+  }
 
 }
