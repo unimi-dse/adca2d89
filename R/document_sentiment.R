@@ -23,7 +23,7 @@ document_sentiment <- function (document) {
     if (non_flag == TRUE) {
       word <- paste0 ('non_', word) # change the word to its 'non_' form if the flag is TRUE
     }
-    sentiment <- term_sentiment (word)
+    sentiment <- sentimeter::term_sentiment (word)
     if (sentiment != 0) {
       sentestimate <- sentestimate + sentiment
       effective_terms <- append (effective_terms, word) # list of the terms found in the lexicon

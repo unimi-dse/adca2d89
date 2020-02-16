@@ -25,7 +25,7 @@ sentiment_analysis <- function (reviews) {
   i <- 1
   cat('\n\n')
   for (review in reviews$text) {
-    report <- document_sentiment (review)
+    report <- sentimeter::document_sentiment (review)
     cat('---------------------------------\n')
     writeLines (strwrap (review, width = 70))
     cat('\n')
