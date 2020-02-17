@@ -7,17 +7,10 @@
 sentiment_analysis(reviews)
 }
 \arguments{
-\item{asin}{character. ASIN of the product.}
-
-\item{page_number}{numeric. The page that user want to scrape reviews.}
-}
-\value{
-data.frame
-\describe{
-  \item{title}{Title of the review}
+\item{data.frame}{\describe{
   \item{text}{Content of the review}
   \item{star}{Number of stars}
-}
+}}
 }
 \description{
 Analyze the sentiment of reviews using exclusive sentiment lexicon and reports them
