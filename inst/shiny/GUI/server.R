@@ -9,7 +9,7 @@ server <- function(input, output) {
       asin = sentimeter::get_asin(input$amazon_url)
       cat(paste("ASIN:", asin))
       cat('\n')
-      cat(paste("Number of reviews:", asin))
+      cat(paste("Number of reviews:", sentimeter::number_of_reviews(asin)))
       sentimeter::sentiment_analysis(sentimeter::scrape_reviews(asin, 1))
     }
   })
