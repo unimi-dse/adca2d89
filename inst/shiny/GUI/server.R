@@ -6,10 +6,9 @@ server <- function(input, output) {
     if (input$amazon_url == "") {
       cat("Please enter the address of the product on amazon.it\nin the given box on sidebar.")
     } else {
-      asin = sentimeter::get_asin(input$amazon_url)
-      cat(paste("ASIN:", asin))
+      cat(paste("ASIN:", sentimeter::get_asin(input$amazon_url)))
       cat('\n')
-      cat(paste("Number of reviews:", sentimeter::number_of_reviews(asin)))
+      cat(paste("Number of reviews:", sentimeter::number_of_reviews(sentimeter::get_asin(input$amazon_url))))
       sentimeter::sentiment_analysis(sentimeter::scrape_reviews(asin, 1))
     }
   })
