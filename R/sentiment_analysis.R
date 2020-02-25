@@ -26,7 +26,7 @@ sentiment_analysis <- function (reviews) {
     writeLines (strwrap (review, width = 70))
     cat('\n')
     if (report$sentimate != 0) {
-      cat (paste0('Sentimate: ', round(report$sentimate+3, digits = 0), ' (', round(report$sentimate+3, digits = 2), ')'))
+      cat (paste0('Sentimate: ', round(report$sentimate, digits = 0), ' (', round(report$sentimate, digits = 2), ')'))
       cat ('\n')
       cat ('First five effective terms: ')
       cat (paste0 (head (report$effective_terms, 5), ', '))

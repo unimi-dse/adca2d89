@@ -1,7 +1,7 @@
 Package: sentimeter
 Type: Package
 Title: A Toolkit for Analyzing Sentiment of Italian Amazon Reviews
-Version: 0.4.0
+Version: 0.5.0
 Author: Mehdi Abbassi
 Maintainer: Mehdi Abbassi <mehdi.abbassi@studenti.unimi.it>
 Description: This packages receives the like of the product on amazon.it (not other countries!)
